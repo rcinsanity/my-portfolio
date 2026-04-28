@@ -1,10 +1,12 @@
 export const skills = [
-  { name: 'PHP',        level: 80 },
-  { name: 'Python',     level: 70 },
-  { name: 'React',      level: 65 },
-  { name: 'MySQL',      level: 75 },
-  { name: 'UI/UX',      level: 72 },
-  { name: 'HTML/CSS',   level: 90 },
+  { name: 'PHP',        icon: 'php' },
+  { name: 'Python',     icon: 'python' },
+  { name: 'React',      icon: 'react' },
+  { name: 'MySQL',      icon: 'mysql' },
+  { name: 'HTML/CSS',   icon: 'html5' },
+  { name: 'Figma',      icon: 'figma' },
+  { name: 'JavaScript', icon: 'javascript' },
+  { name: 'Tailwind',   icon: 'tailwindcss' },
 ]
 
 export const projects = [
