@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTyping } from '../hooks'
 import Reveal from './Reveal'
+import avatarImg from '../assets/avatar.jpg'
 
 export default function Hero() {
   const typed = useTyping(['web developer.', 'UI/UX designer.', 'IT student.', 'problem solver.'])
@@ -59,8 +60,7 @@ export default function Hero() {
           <div className="avatar-wrap">
             <div className="avatar-ring" aria-hidden="true" />
             <div className="avatar-frame">
-              {/* Swap avatar-placeholder with <img> once you add your photo */}
-              <div className="avatar-placeholder" aria-label="Ralphael Zion Chata">RZC</div>
+              <img src={avatarImg} alt="Ralphael Zion Chata" />
               <div className="avatar-scan" aria-hidden="true" />
             </div>
             <div className="avatar-badge" aria-label="Dean's Lister award">
