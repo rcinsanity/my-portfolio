@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
-  --text: #7a8499;
-  --text-h: #e8edf5;
-  --bg: #060910;
-  --bg-surface: #0b0f1a;
-  --bg-card: #0e1422;
-  --border: #161e30;
-  --accent: #00ff9d;
-  --accent-dim: #00cc7a;
-  --accent-bg: rgba(0, 255, 157, 0.06);
-  --accent-border: rgba(0, 255, 157, 0.25);
-  --accent-glow: 0 0 24px rgba(0, 255, 157, 0.3);
-  --accent-glow-lg: 0 0 60px rgba(0, 255, 157, 0.15);
-  --cyan: #38bdf8;
-  --cyan-bg: rgba(56, 189, 248, 0.07);
-  --purple: #a78bfa;
+  --text: #8b8fa8;
+  --text-h: #e2e0f0;
+  --bg: #0f0f14;
+  --bg-surface: #13121a;
+  --bg-card: #17161f;
+  --border: #24222f;
+  --accent: #a78bfa;
+  --accent-dim: #8b5cf6;
+  --accent-bg: rgba(167, 139, 250, 0.08);
+  --accent-border: rgba(167, 139, 250, 0.25);
+  --accent-glow: 0 0 24px rgba(167, 139, 250, 0.3);
+  --accent-glow-lg: 0 0 60px rgba(167, 139, 250, 0.15);
+  --cyan: #93c5fd;
+  --cyan-bg: rgba(147, 197, 253, 0.07);
+  --purple: #c4b5fd;
   --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
   --transition: background 0.3s, color 0.3s, border-color 0.3s;
 
@@ -32,29 +32,29 @@
 
 /* ── Light mode ── */
 :root.light {
-  --text: #4a5568;
-  --text-h: #0f172a;
-  --bg: #f0f4f8;
-  --bg-surface: #e2e8f0;
+  --text: #4a4560;
+  --text-h: #1a1830;
+  --bg: #f5f4fa;
+  --bg-surface: #eceaf5;
   --bg-card: #ffffff;
-  --border: #cbd5e1;
-  --accent: #059669;
-  --accent-dim: #047857;
-  --accent-bg: rgba(5, 150, 105, 0.08);
-  --accent-border: rgba(5, 150, 105, 0.3);
-  --accent-glow: 0 0 24px rgba(5, 150, 105, 0.2);
-  --accent-glow-lg: 0 0 60px rgba(5, 150, 105, 0.1);
-  --cyan: #0284c7;
-  --cyan-bg: rgba(2, 132, 199, 0.07);
+  --border: #d4d0e8;
+  --accent: #7c3aed;
+  --accent-dim: #6d28d9;
+  --accent-bg: rgba(124, 58, 237, 0.08);
+  --accent-border: rgba(124, 58, 237, 0.3);
+  --accent-glow: 0 0 24px rgba(124, 58, 237, 0.2);
+  --accent-glow-lg: 0 0 60px rgba(124, 58, 237, 0.1);
+  --cyan: #2563eb;
+  --cyan-bg: rgba(37, 99, 235, 0.07);
   --purple: #7c3aed;
   color-scheme: light;
 }
 
-:root.light body { background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px); background-size: 28px 28px; }
-:root.light .nav { background: rgba(240, 244, 248, 0.88); }
-:root.light .nav nav { background: rgba(240, 244, 248, 0.97); }
+:root.light body { background-image: radial-gradient(circle, #d4d0e8 1px, transparent 1px); background-size: 28px 28px; }
+:root.light .nav { background: rgba(245, 244, 250, 0.88); }
+:root.light .nav nav { background: rgba(245, 244, 250, 0.97); }
 :root.light .hero-name-last { -webkit-text-stroke-color: var(--accent); }
-:root.light .contact-bg-text { -webkit-text-stroke: 1px rgba(5, 150, 105, 0.05); }
+:root.light .contact-bg-text { -webkit-text-stroke: 1px rgba(124, 58, 237, 0.05); }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -63,7 +63,7 @@ body {
   background: var(--bg);
   overflow-x: hidden;
   transition: var(--transition);
-  background-image: radial-gradient(circle, #1a2235 1px, transparent 1px);
+  background-image: radial-gradient(circle, #24222f 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
