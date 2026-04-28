@@ -34,6 +34,44 @@ export const projects = [
   },
 ]
 
+export const certifications = [
+  {
+    title: 'CCNA: Enterprise Networking, Security, and Automation',
+    issuer: 'Cisco Networking Academy',
+    org: 'Pasig Catholic College',
+    date: '11 Jul 2025',
+    category: 'Networking',
+  },
+  {
+    title: 'IT Essentials',
+    issuer: 'Cisco Networking Academy',
+    org: 'Pasig Catholic College',
+    date: '30 Aug 2025',
+    category: 'IT',
+  },
+  {
+    title: 'Cybersecurity Essentials',
+    issuer: 'Cisco Networking Academy',
+    org: 'Pasig Catholic College',
+    date: '06 Dec 2024',
+    category: 'Security',
+  },
+  {
+    title: 'CCNAv7: Switching, Routing, and Wireless Essentials',
+    issuer: 'Cisco Networking Academy',
+    org: 'Pasig Catholic College',
+    date: '24 Jul 2024',
+    category: 'Networking',
+  },
+  {
+    title: 'CCNAv7: Introduction to Networks',
+    issuer: 'Cisco Networking Academy',
+    org: 'Pasig Catholic College',
+    date: '10 Mar 2024',
+    category: 'Networking',
+  },
+]
+
 export const timeline = [
   {
     date: 'Jan 2026 – Mar 2026',

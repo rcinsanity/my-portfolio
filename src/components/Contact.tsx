@@ -25,7 +25,7 @@ export default function Contact() {
       <div className="contact-bg-text" aria-hidden="true">HELLO</div>
 
       <Reveal className="contact-inner">
-        <span className="section-num" aria-hidden="true">03</span>
+        <span className="section-num" aria-hidden="true">04</span>
         <p className="section-label">get in touch</p>
         <h2 className="contact-title" id="contact-title">
           Let's work<br /><span>together.</span>

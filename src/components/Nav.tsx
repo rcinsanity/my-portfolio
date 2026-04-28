@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useActiveSection, useScrolled } from '../hooks'
 
-const NAV_LINKS = ['about', 'projects', 'experience', 'contact']
+const NAV_LINKS = ['about', 'projects', 'experience', 'certifications', 'contact']
 
 interface NavProps {
   light: boolean

@@ -69,7 +69,7 @@ export default function Hero() {
           <div className="avatar-wrap">
             <div className="avatar-ring" aria-hidden="true" />
             <div className="avatar-frame">
-              {/* Replace avatar-placeholder with <img> once you add your photo */}
+              <img src="/src/assets/avatar.jpg" alt="Ralphael Zion Chata" />
               <div className="avatar-placeholder" aria-label="Ralphael Zion Chata">RZC</div>
               <div className="avatar-scan" aria-hidden="true" />
             </div>
