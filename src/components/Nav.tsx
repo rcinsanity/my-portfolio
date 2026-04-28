@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { useActiveSection, useScrolled } from '../hooks'
-
-const NAV_LINKS = ['about', 'projects', 'experience', 'certifications', 'contact']
+import { NavLink, useLocation } from 'react-router-dom'
+import { useScrolled } from '../hooks'
 
 interface NavProps {
   light: boolean
@@ -10,33 +9,39 @@ interface NavProps {
 
 export default function Nav({ light, onToggleTheme }: NavProps) {
   const [menuOpen, setMenuOpen] = useState(false)
-  const active = useActiveSection(NAV_LINKS)
   const scrolled = useScrolled(80)
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
 
   return (
     <header className={`nav ${scrolled ? 'nav-scrolled' : ''}`}>
-      <a href="#about" className="nav-logo" aria-label="Home">
+      <NavLink to="/" className="nav-logo" aria-label="Home" onClick={() => setMenuOpen(false)}>
         <span className="logo-bracket">[</span>rzc<span className="logo-bracket">]</span>
-      </a>
+      </NavLink>
 
       <div className="nav-right">
         <nav className={menuOpen ? 'open' : ''} aria-label="Main navigation">
-          {NAV_LINKS.map((l, i) => (
-            <a
-              key={l}
-              href={`#${l}`}
-              className={active === l ? 'nav-active' : ''}
-              onClick={() => setMenuOpen(false)}
-            >
-              <span className="nav-num">0{i + 1}.</span> {l}
-            </a>
-          ))}
-          <a
-            href="/Chata-Resume.pdf"
-            className="nav-resume"
-            download
-            onClick={() => setMenuOpen(false)}
-          >
+          {isHome ? (
+            /* Home page — anchor links */
+            <>
+              <a href="#about"    onClick={() => setMenuOpen(false)}><span className="nav-num">01.</span> about</a>
+              <a href="#skills"   onClick={() => setMenuOpen(false)}><span className="nav-num">02.</span> skills</a>
+              <a href="#projects" onClick={() => setMenuOpen(false)}><span className="nav-num">03.</span> projects</a>
+              <NavLink to="/work" onClick={() => setMenuOpen(false)} className="nav-work-link">
+                more ↗
+              </NavLink>
+            </>
+          ) : (
+            /* Work page — route links */
+            <>
+              <NavLink to="/"                onClick={() => setMenuOpen(false)}><span className="nav-num">00.</span> home</NavLink>
+              <a href="#projects"            onClick={() => setMenuOpen(false)}><span className="nav-num">01.</span> projects</a>
+              <a href="#experience"          onClick={() => setMenuOpen(false)}><span className="nav-num">02.</span> experience</a>
+              <a href="#certifications"      onClick={() => setMenuOpen(false)}><span className="nav-num">03.</span> certifications</a>
+              <a href="#contact"             onClick={() => setMenuOpen(false)}><span className="nav-num">04.</span> contact</a>
+            </>
+          )}
+          <a href="/Chata-Resume.pdf" className="nav-resume" download onClick={() => setMenuOpen(false)}>
             resume ↓
           </a>
         </nav>
@@ -68,7 +73,7 @@ export default function Nav({ light, onToggleTheme }: NavProps) {
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
         >
-          <span className={menuOpen ? 'open' : ''} /><span className={menuOpen ? 'open' : ''} /><span className={menuOpen ? 'open' : ''} />
+          <span /><span /><span />
         </button>
       </div>
     </header>

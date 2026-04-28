@@ -43,6 +43,18 @@
 }
 .nav-resume:hover { background: var(--accent-bg) !important; box-shadow: var(--accent-glow); }
 
+.nav-work-link {
+  font-family: var(--mono); font-size: 12px;
+  color: var(--cyan) !important;
+  letter-spacing: 0.06em;
+}
+
+.home-work-cta {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
 .theme-toggle {
   display: flex; align-items: center; justify-content: center;
   width: 34px; height: 34px; border-radius: 8px;

@@ -1,31 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import { useTheme } from './hooks'
 import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import Certifications from './components/Certifications'
-import Contact from './components/Contact'
 import BackToTop from './components/BackToTop'
 import Cursor from './components/Cursor'
+import Home from './pages/Home'
+import Work from './pages/Work'
 
-export default function App() {
+function Layout() {
   const { light, toggle } = useTheme()
 
   return (
     <>
       <Cursor />
-      <a href="#about" className="skip-link">Skip to main content</a>
+      <a href="#main" className="skip-link">Skip to main content</a>
       <Nav light={light} onToggleTheme={toggle} />
-      <main id="main">
-        <Hero />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Certifications />
-        <Contact />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+      </Routes>
       <footer className="footer">
         <span className="footer-logo" aria-label="RZC logo">[rzc]</span>
         <p>designed &amp; built by <span>Ralphael Zion D. Chata</span> — {new Date().getFullYear()}</p>
@@ -33,5 +26,13 @@ export default function App() {
       </footer>
       <BackToTop />
     </>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
   )
 }

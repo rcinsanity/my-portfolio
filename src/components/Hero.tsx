@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom'
 import { useTyping } from '../hooks'
 import Reveal from './Reveal'
-import { skills } from '../data'
 
 export default function Hero() {
   const typed = useTyping(['web developer.', 'UI/UX designer.', 'IT student.', 'problem solver.'])
@@ -42,19 +42,9 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="hero-tags" role="list" aria-label="Skills">
-              {skills.map((s, i) => (
-                <span key={s.name} role="listitem" className="tag" style={{ '--i': i } as React.CSSProperties}>
-                  {s.name}
-                </span>
-              ))}
-            </div>
-          </Reveal>
-
-          <Reveal delay={500}>
             <div className="hero-actions">
-              <a href="#projects" className="btn btn-primary">view_projects()</a>
-              <a href="#contact" className="btn btn-ghost">contact_me()</a>
+              <a href="#skills" className="btn btn-primary">view_skills()</a>
+              <Link to="/work" className="btn btn-ghost">my_work()</Link>
               <a href="/Chata-Resume.pdf" className="btn btn-outline" download>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
@@ -69,8 +59,7 @@ export default function Hero() {
           <div className="avatar-wrap">
             <div className="avatar-ring" aria-hidden="true" />
             <div className="avatar-frame">
-              <img src="/src/assets/avatar.jpg" alt="Ralphael Zion Chata" />
-
+              {/* Swap avatar-placeholder with <img> once you add your photo */}
               <div className="avatar-placeholder" aria-label="Ralphael Zion Chata">RZC</div>
               <div className="avatar-scan" aria-hidden="true" />
             </div>
@@ -81,7 +70,7 @@ export default function Hero() {
         </Reveal>
       </div>
 
-      <a href="#projects" className="scroll-hint" aria-label="Scroll to projects">
+      <a href="#skills" className="scroll-hint" aria-label="Scroll down">
         <span aria-hidden="true">scroll</span>
         <div className="scroll-line" aria-hidden="true" />
       </a>
