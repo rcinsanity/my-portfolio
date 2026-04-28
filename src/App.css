@@ -137,7 +137,7 @@
 .avatar-frame img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(0.22,1,0.36,1); }
 .avatar-wrap:hover .avatar-frame img { transform: scale(1.04); }
 .avatar-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 36px; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; text-shadow: var(--accent-glow); }
-.avatar-scan { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(0,255,157,0.06) 50%, transparent 100%); animation: scan 4s cubic-bezier(0.45,0.05,0.55,0.95) infinite; }
+.avatar-scan { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 0%, rgba(167,139,250,0.06) 50%, transparent 100%); animation: scan 4s cubic-bezier(0.45,0.05,0.55,0.95) infinite; }
 @keyframes scan { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
 .avatar-badge { position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); background: var(--bg-card); border: 1px solid var(--accent-border); color: var(--accent); font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px; border-radius: 99px; white-space: nowrap; }
 
@@ -460,7 +460,7 @@
    CONTACT
 ════════════════════════════════ */
 .contact-section { position: relative; border-top: 1px solid var(--border); padding: 100px 40px; overflow: hidden; text-align: center; background: transparent; }
-.contact-bg-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: var(--mono); font-size: clamp(80px,18vw,200px); font-weight: 700; color: transparent; -webkit-text-stroke: 1px rgba(0,255,157,0.04); pointer-events: none; user-select: none; white-space: nowrap; letter-spacing: -4px; }
+.contact-bg-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-family: var(--mono); font-size: clamp(80px,18vw,200px); font-weight: 700; color: transparent; -webkit-text-stroke: 1px rgba(167,139,250,0.04); pointer-events: none; user-select: none; white-space: nowrap; letter-spacing: -4px; }
 .contact-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
 .contact-title { font-size: clamp(36px,6vw,64px); font-weight: 700; color: var(--text-h); letter-spacing: -1.5px; margin: 12px 0 20px; line-height: 1.05; }
 .contact-title span { color: var(--accent); text-shadow: var(--accent-glow-lg); }
