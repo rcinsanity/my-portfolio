@@ -49,6 +49,7 @@ export const certifications = [
     org: 'Pasig Catholic College',
     date: '11 Jul 2025',
     category: 'Networking',
+    pdf: '/certificates/ccna-ensa.pdf',
   },
   {
     title: 'IT Essentials',
@@ -56,6 +57,7 @@ export const certifications = [
     org: 'Pasig Catholic College',
     date: '30 Aug 2025',
     category: 'IT',
+    pdf: '/certificates/it-essentials.pdf',
   },
   {
     title: 'Cybersecurity Essentials',
@@ -63,6 +65,7 @@ export const certifications = [
     org: 'Pasig Catholic College',
     date: '06 Dec 2024',
     category: 'Security',
+    pdf: '/certificates/cybersecurity.pdf',
   },
   {
     title: 'CCNAv7: Switching, Routing, and Wireless Essentials',
@@ -70,6 +73,7 @@ export const certifications = [
     org: 'Pasig Catholic College',
     date: '24 Jul 2024',
     category: 'Networking',
+    pdf: '/certificates/ccna-srwe.pdf',
   },
   {
     title: 'CCNAv7: Introduction to Networks',
@@ -77,6 +81,7 @@ export const certifications = [
     org: 'Pasig Catholic College',
     date: '10 Mar 2024',
     category: 'Networking',
+    pdf: '/certificates/ccna-intro.pdf',
   },
 ]
 

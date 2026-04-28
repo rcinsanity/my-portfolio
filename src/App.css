@@ -225,8 +225,15 @@
   flex-direction: column;
   gap: 8px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   transition: border-color 0.3s, transform 0.3s;
+  text-align: left;
+}
+
+.cert-card-btn {
+  width: 100%;
+  font-family: var(--mono);
+  cursor: pointer;
 }
 
 .cert-card::after {
@@ -312,6 +319,60 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.cert-view-hint {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text);
+  opacity: 0;
+  transition: opacity 0.2s;
+  letter-spacing: 0.04em;
+}
+
+.cert-card:hover .cert-view-hint { opacity: 1; }
+
+/* ── Cert hover preview ── */
+.cert-preview {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: 220px;
+  background: #fff;
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--accent-glow), 0 24px 48px rgba(0,0,0,0.5);
+  z-index: 50;
+  pointer-events: none;
+  animation: previewIn 0.18s ease both;
+}
+
+@keyframes previewIn {
+  from { opacity: 0; transform: translateX(-50%) translateY(8px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.cert-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.cert-preview-hint {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(6,9,16,0.9), transparent);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 12px 8px 8px;
 }
 
 .cert-dot {
