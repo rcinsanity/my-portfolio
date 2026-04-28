@@ -8,12 +8,14 @@ import Experience from './components/Experience'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import BackToTop from './components/BackToTop'
+import Cursor from './components/Cursor'
 
 export default function App() {
   const { light, toggle } = useTheme()
 
   return (
     <>
+      <Cursor />
       <a href="#about" className="skip-link">Skip to main content</a>
       <Nav light={light} onToggleTheme={toggle} />
       <main id="main">
