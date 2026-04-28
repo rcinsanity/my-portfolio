@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ralphael Zion Chata — IT Student & Web Developer</title>
+    <meta name="description" content="Portfolio of Ralphael Zion D. Chata — IT student at Pasig Catholic College, web developer, UI/UX designer, and Dean's Lister. Open to internships and freelance work." />
+    <meta name="author" content="Ralphael Zion D. Chata" />
+    <meta property="og:title" content="Ralphael Zion Chata — IT Student & Web Developer" />
+    <meta property="og:description" content="Portfolio of Ralphael Zion D. Chata — web developer, UI/UX designer, Dean's Lister. Open to internships and freelance work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ralphaelchata.dev" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ralphael Zion Chata — IT Student & Web Developer" />
+    <meta name="twitter:description" content="Portfolio of Ralphael Zion D. Chata — web developer, UI/UX designer, Dean's Lister." />
+    <style>
+      /* splash screen */
+      #splash {
+        position: fixed; inset: 0; z-index: 99999;
+        background: #060910;
+        display: flex; align-items: center; justify-content: center;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+      }
+      #splash.hidden { opacity: 0; visibility: hidden; }
+      .splash-logo {
+        font-family: ui-monospace, monospace;
+        font-size: 28px; font-weight: 700;
+        color: #00ff9d;
+        letter-spacing: 0.05em;
+        animation: splashPulse 0.8s ease-in-out infinite alternate;
+      }
+      @keyframes splashPulse {
+        from { opacity: 0.4; } to { opacity: 1; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="splash"><span class="splash-logo">[rzc]</span></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const s = document.getElementById('splash')
+          if (s) s.classList.add('hidden')
+        }, 800)
+      })
+    </script>
+  </body>
+</html>
