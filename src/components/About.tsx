@@ -65,16 +65,17 @@ export default function About() {
 
       {/* Journey timeline */}
       <Reveal delay={100}>
-        <h3 className="about-journey-title">
-          <span className="section-label" style={{ display: 'inline' }}>journey</span>
-        </h3>
+        <h3 className="about-journey-title">journey</h3>
       </Reveal>
       <div className="about-journey">
         {journey.map((j, i) => (
           <Reveal key={j.year} delay={i * 70}>
             <div className="about-journey-item">
+              <div className="about-journey-connector" aria-hidden="true">
+                <div className="about-journey-dot" />
+                {i < journey.length - 1 && <div className="about-journey-line" />}
+              </div>
               <span className="about-journey-year">{j.year}</span>
-              <div className="about-journey-dot" aria-hidden="true" />
               <p className="about-journey-label">{j.label}</p>
             </div>
           </Reveal>
