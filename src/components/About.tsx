@@ -8,14 +8,10 @@ const stats = [
 ]
 
 const journey = [
-  { year: '2008', label: 'Started Grade 1 at Saint Gabriel International School' },
-  { year: '2017', label: 'Completed Grade 8 at Saint Gabriel International School' },
-  { year: '2018', label: 'Enrolled at Pasig Catholic College — Senior High School (STEM strand)' },
-  { year: '2020', label: 'Graduated Senior High School and continued to college at PCC' },
-  { year: '2022', label: 'Enrolled in BS Information Technology at Pasig Catholic College' },
-  { year: '2023', label: "Achieved Dean's Lister status — maintained through 2025" },
-  { year: '2024', label: 'Earned Cisco certifications in networking and cybersecurity' },
-  { year: '2026', label: 'Interned at Pru Life UK · Graduated · Open to full-time roles' },
+  { year: '2008–2017', label: 'Grade 1 to Grade 8 at Saint Gabriel International School' },
+  { year: '2018–2022', label: 'Senior High School (STEM) at Pasig Catholic College' },
+  { year: '2022–2026', label: 'BS Information Technology at Pasig Catholic College — Dean\'s Lister 2023–2025' },
+  { year: '2026',      label: 'Interned at Pru Life UK · Graduated · Open to full-time roles' },
 ]
 
 export default function About() {
