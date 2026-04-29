@@ -60,7 +60,13 @@ export default function Hero() {
           <div className="avatar-wrap">
             <div className="avatar-ring" aria-hidden="true" />
             <div className="avatar-frame">
-              <img src={avatarImg} alt="Ralphael Zion Chata" />
+              <img
+                src={avatarImg}
+                alt="Ralphael Zion Chata — IT student and web developer"
+                width="260"
+                height="260"
+                fetchPriority="high"
+              />
               <div className="avatar-scan" aria-hidden="true" />
             </div>
             <div className="avatar-badge" aria-label="Dean's Lister award">

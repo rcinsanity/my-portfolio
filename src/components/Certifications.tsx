@@ -28,14 +28,12 @@ export default function Certifications() {
       <div className="certs-grid" role="list">
         {certifications.map((c, i) => (
           <Reveal key={c.title} delay={i * 80}>
-            <div
-              className="cert-card cert-card-btn"
+            <button
+              className="cert-card"
               role="listitem"
               onMouseEnter={() => setHovered(c.title)}
               onMouseLeave={() => setHovered(null)}
               onClick={() => setActive(c)}
-              tabIndex={0}
-              onKeyDown={e => e.key === 'Enter' && setActive(c)}
               aria-label={`View certificate: ${c.title}`}
             >
               {/* PDF preview on hover */}
@@ -73,7 +71,7 @@ export default function Certifications() {
                 </span>
                 <span className="cert-view-hint">click to expand ↗</span>
               </div>
-            </div>
+            </button>
           </Reveal>
         ))}
       </div>
