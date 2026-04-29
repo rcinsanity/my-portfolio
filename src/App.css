@@ -510,19 +510,32 @@ a.contact-link:hover { color: var(--accent); }
 /* ════════════════════════════════
    RESPONSIVE
 ════════════════════════════════ */
+
+/* ── Large tablet / small desktop ── */
 @media (max-width: 1240px) {
   .back-to-top { right: 20px; }
 }
 
+/* ── Tablet ── */
 @media (max-width: 900px) {
+  /* Bento */
   .bento { grid-template-columns: 1fr 1fr; }
   .bento-0 { grid-column: span 2; }
   .bento-1 { grid-column: span 1; }
   .bento-2 { grid-column: span 1; }
   .bento-3 { grid-column: span 2; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: repeat(4, 1fr); }
+
+  /* About */
+  .about-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: repeat(4, 1fr); }
 }
 
+/* ── Mobile landscape / small tablet ── */
 @media (max-width: 768px) {
+  /* Nav */
   .nav { padding: 0 24px; }
   .nav-right { gap: 12px; }
   .nav nav {
@@ -534,28 +547,74 @@ a.contact-link:hover { color: var(--accent); }
   .nav nav.open { display: flex; }
   .nav-burger { display: flex; }
 
+  /* Hero */
   .hero { padding: 80px 24px 60px; }
   .hero-inner { flex-direction: column-reverse; gap: 40px; text-align: center; }
   .hero-status, .hero-tags, .hero-actions { justify-content: center; }
   .hero-bio { margin-left: auto; margin-right: auto; }
-  .avatar-wrap { width: 180px; height: 180px; }
+  .avatar-wrap { width: 160px; height: 160px; }
 
-  .section { padding: 72px 24px; }
+  /* Sections */
+  .section { padding: 64px 24px; }
+
+  /* Experience timeline */
   .timeline-item { grid-template-columns: 1fr; }
   .timeline-left { text-align: left; }
   .timeline-connector { flex-direction: row; height: 20px; }
   .tl-line { width: 100%; height: 1px; margin-top: 0; margin-left: 6px; background: linear-gradient(to right, var(--accent-border), transparent); }
 
-  .contact-section { padding: 72px 24px; }
+  /* About */
+  .about-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .about-bio-card { padding: 20px; }
+
+  /* About journey — collapse to single column like timeline on mobile */
+  .about-journey .timeline-item { grid-template-columns: 1fr; }
+  .about-journey .timeline-left { text-align: left; }
+  .about-journey .timeline-connector { flex-direction: row; height: 20px; }
+  .about-journey .tl-line { width: 100%; height: 1px; margin-top: 0; margin-left: 6px; background: linear-gradient(to right, var(--accent-border), transparent); }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+
+  /* Contact */
+  .contact-section { padding: 64px 24px; }
   .form-row { grid-template-columns: 1fr; }
+
+  /* Footer */
   .footer { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Toast */
+  .toast { font-size: 12px; padding: 10px 18px; white-space: normal; text-align: center; max-width: calc(100vw - 48px); }
 }
 
+/* ── Mobile portrait ── */
 @media (max-width: 540px) {
+  /* Bento */
   .bento { grid-template-columns: 1fr; }
   .bento-0, .bento-1, .bento-2, .bento-3 { grid-column: span 1; }
+
+  /* Hero */
   .hero-actions { flex-direction: column; align-items: center; }
   .btn { width: 100%; justify-content: center; }
+  .hero-name { font-size: 38px; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .skill-box { padding: 16px 8px 12px; }
+  .skill-icon { width: 28px; height: 28px; }
+  .skill-name { font-size: 9px; }
+
+  /* About */
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .about-stat-value { font-size: 18px; }
+  .about-stat-sub { font-size: 9px; }
+
+  /* Certs grid */
+  .certs-grid { grid-template-columns: 1fr; }
+
+  /* Section header */
+  .section-title { font-size: 26px; }
 }
 
 /* ════════════════════════════════
@@ -825,11 +884,4 @@ a.contact-link:hover { color: var(--accent); }
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .about-grid { grid-template-columns: 1fr; }
-  .about-journey-item { grid-template-columns: 100px 32px 1fr; }
-}
 
-@media (max-width: 540px) {
-  .about-journey-item { grid-template-columns: 80px 28px 1fr; gap: 0 10px; }
-}
