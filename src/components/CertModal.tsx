@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import './CertModal.css'
 
 interface CertModalProps {
@@ -8,7 +9,6 @@ interface CertModalProps {
 }
 
 export default function CertModal({ title, pdf, onClose }: CertModalProps) {
-  // Close on Escape key
   useEffect(() => {
     const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
     document.addEventListener('keydown', handler)
@@ -19,7 +19,7 @@ export default function CertModal({ title, pdf, onClose }: CertModalProps) {
     }
   }, [onClose])
 
-  return (
+  return createPortal(
     <div className="cert-modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={title}>
       <div className="cert-modal" onClick={e => e.stopPropagation()}>
         <div className="cert-modal-header">
@@ -45,6 +45,7 @@ export default function CertModal({ title, pdf, onClose }: CertModalProps) {
           />
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   )
 }
