@@ -8,6 +8,14 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
+  /* ensure it sits above everything including the #root border container */
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  width: 100vw;
+  height: 100dvh;
+  margin: 0;
   animation: overlayIn 0.2s ease both;
 }
 
@@ -22,7 +30,8 @@
   border-radius: 12px;
   width: 100%;
   max-width: 860px;
-  height: 90vh;
+  height: min(90dvh, 700px);
+  max-height: 90dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
