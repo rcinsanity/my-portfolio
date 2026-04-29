@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import type { FormEvent } from 'react'
 import Reveal from './Reveal'
+import Toast from './Toast'
 
 // 1. Go to https://formspree.io and create a free account
 // 2. Create a new form → copy the form ID (looks like "xpwzabcd")
@@ -10,6 +11,8 @@ const FORMSPREE_ID = 'xpqkgoky'
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [toastVisible, setToastVisible] = useState(false)
+  const hideToast = useCallback(() => setToastVisible(false), [])
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm(f => ({ ...f, [e.target.name]: e.target.value }))
@@ -28,6 +31,7 @@ export default function Contact() {
 
       if (res.ok) {
         setStatus('sent')
+        setToastVisible(true)
         setForm({ name: '', email: '', message: '' })
       } else {
         setStatus('error')
@@ -119,6 +123,11 @@ export default function Contact() {
           <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-btn" aria-label="LinkedIn profile">LinkedIn</a>
         </div>
       </Reveal>
+      <Toast
+        message="Message sent! I'll get back to you soon."
+        visible={toastVisible}
+        onHide={hideToast}
+      />
     </section>
   )
 }
