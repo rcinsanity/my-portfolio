@@ -8,11 +8,13 @@ const stats = [
 ]
 
 const journey = [
-  { year: '2010', label: 'Started primary school at Saint Gabriel International School' },
-  { year: '2016', label: 'Moved to Pasig Catholic College for secondary school' },
+  { year: '2008', label: 'Started Grade 1 at Saint Gabriel International School' },
+  { year: '2017', label: 'Completed Grade 8 at Saint Gabriel International School' },
+  { year: '2018', label: 'Enrolled at Pasig Catholic College — Senior High School (STEM strand)' },
+  { year: '2020', label: 'Graduated Senior High School and continued to college at PCC' },
   { year: '2022', label: 'Enrolled in BS Information Technology at Pasig Catholic College' },
   { year: '2023', label: "Achieved Dean's Lister status — maintained through 2025" },
-  { year: '2024', label: 'Earned first Cisco certifications in networking and cybersecurity' },
+  { year: '2024', label: 'Earned Cisco certifications in networking and cybersecurity' },
   { year: '2026', label: 'Interned at Pru Life UK · Graduated · Open to full-time roles' },
 ]
 

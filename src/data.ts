@@ -103,17 +103,17 @@ export const timeline = [
     desc: 'Specialized in web development, UI/UX design, and database management. Built a capstone student record management system and multiple web-based case study projects using PHP, Python, and modern web technologies.',
   },
   {
-    date: '2016 – 2022',
+    date: '2018 – 2022',
     type: 'Education',
-    title: 'Secondary School',
+    title: 'Senior High School — STEM',
     org: 'Pasig Catholic College',
-    desc: 'Completed junior and senior high school with a strong foundation in mathematics, science, and early exposure to computer studies.',
+    desc: 'Completed Senior High School under the STEM strand, building a strong foundation in science, technology, engineering, and mathematics.',
   },
   {
-    date: '2010 – 2016',
+    date: '2008 – 2017',
     type: 'Education',
-    title: 'Primary School',
+    title: 'Grade 1 – Grade 8',
     org: 'Saint Gabriel International School',
-    desc: 'Completed primary education with a focus on core academics and early development of communication and teamwork skills.',
+    desc: 'Completed primary and early secondary education from Grade 1 through Grade 8.',
   },
 ]
