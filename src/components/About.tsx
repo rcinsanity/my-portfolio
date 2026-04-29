@@ -85,9 +85,7 @@ export default function About() {
             </Reveal>
           ))}
         </div>
-      </div>
-
-      {/* Journey timeline */}
+      </div>      {/* Journey timeline */}
       <Reveal delay={100}>
         <h3 className="about-journey-title">journey</h3>
       </Reveal>
