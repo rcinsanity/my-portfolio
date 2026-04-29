@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
+import About from '../components/About'
 import Skills from '../components/Skills'
 import Reveal from '../components/Reveal'
 import { projects } from '../data'
@@ -8,9 +9,10 @@ export default function Home() {
   return (
     <main id="main">
       <Hero />
+      <About />
       <Skills />
 
-      {/* Projects preview — 3 cards + CTA to /work */}
+      {/* Projects preview — cards + CTA to /work */}
       <section className="section section-skills" id="projects" aria-labelledby="home-projects-title">
         <Reveal>
           <div className="section-header">

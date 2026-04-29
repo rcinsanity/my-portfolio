@@ -42,7 +42,7 @@ export default function Skills() {
     <section className="section section-skills" id="skills" aria-labelledby="skills-title">
       <Reveal>
         <div className="section-header">
-          <span className="section-num" aria-hidden="true">02</span>
+          <span className="section-num" aria-hidden="true">03</span>
           <div>
             <p className="section-label">what I work with</p>
             <h2 className="section-title" id="skills-title">Tech Stack</h2>

@@ -24,9 +24,10 @@ export default function Nav({ light, onToggleTheme }: NavProps) {
           {isHome ? (
             /* Home page — anchor links */
             <>
-              <a href="#about"    onClick={() => setMenuOpen(false)}><span className="nav-num">01.</span> about</a>
-              <a href="#skills"   onClick={() => setMenuOpen(false)}><span className="nav-num">02.</span> skills</a>
-              <a href="#projects" onClick={() => setMenuOpen(false)}><span className="nav-num">03.</span> projects</a>
+              <a href="#about"        onClick={() => setMenuOpen(false)}><span className="nav-num">01.</span> about</a>
+              <a href="#about-detail" onClick={() => setMenuOpen(false)}><span className="nav-num">02.</span> bio</a>
+              <a href="#skills"       onClick={() => setMenuOpen(false)}><span className="nav-num">03.</span> skills</a>
+              <a href="#projects"     onClick={() => setMenuOpen(false)}><span className="nav-num">04.</span> projects</a>
               <NavLink to="/work" onClick={() => setMenuOpen(false)} className="nav-work-link">
                 more ↗
               </NavLink>
