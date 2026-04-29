@@ -8,10 +8,34 @@ const stats = [
 ]
 
 const journey = [
-  { year: '2008–2017', label: 'Grade 1 to Grade 8 at Saint Gabriel International School' },
-  { year: '2018–2022', label: 'Senior High School (STEM) at Pasig Catholic College' },
-  { year: '2022–2026', label: 'BS Information Technology at Pasig Catholic College — Dean\'s Lister 2023–2025' },
-  { year: '2026',      label: 'Interned at Pru Life UK · Graduated · Open to full-time roles' },
+  {
+    year: '2008–2017',
+    type: 'Education',
+    title: 'Grade 1 – Grade 8',
+    org: 'Saint Gabriel International School',
+    label: 'Completed primary and early secondary education from Grade 1 through Grade 8.',
+  },
+  {
+    year: '2018–2022',
+    type: 'Education',
+    title: 'Senior High School — STEM',
+    org: 'Pasig Catholic College',
+    label: 'Completed Senior High School under the STEM strand, building a strong foundation in science, technology, engineering, and mathematics.',
+  },
+  {
+    year: '2022–2026',
+    type: 'Education',
+    title: 'BS Information Technology',
+    org: "Pasig Catholic College · Dean's Lister 2023–2025",
+    label: 'Specialized in web development, UI/UX design, and database management. Built a capstone project and multiple web-based case study applications.',
+  },
+  {
+    year: '2026',
+    type: 'On the Job Training',
+    title: 'Creative and Admin Department',
+    org: 'Pru Life UK · Pasig, Metro Manila (Remote)',
+    label: 'Handled creative and administrative tasks in a remote setup. Demonstrated strong communication, adaptability, and the ability to work both independently and collaboratively.',
+  },
 ]
 
 export default function About() {
@@ -67,20 +91,27 @@ export default function About() {
       <Reveal delay={100}>
         <h3 className="about-journey-title">journey</h3>
       </Reveal>
-      <div className="about-journey">
+      <ol className="timeline" aria-label="Academic and career journey">
         {journey.map((j, i) => (
-          <Reveal key={j.year} delay={i * 70}>
-            <div className="about-journey-item">
-              <div className="about-journey-connector" aria-hidden="true">
-                <div className="about-journey-dot" />
-                {i < journey.length - 1 && <div className="about-journey-line" />}
+          <Reveal key={j.year} delay={i * 100} className="timeline-reveal">
+            <li className="timeline-item">
+              <div className="timeline-left">
+                <span className="tl-date">{j.year}</span>
+                <span className="tl-type">{j.type}</span>
               </div>
-              <span className="about-journey-year">{j.year}</span>
-              <p className="about-journey-label">{j.label}</p>
-            </div>
+              <div className="timeline-connector" aria-hidden="true">
+                <div className="tl-dot" />
+                <div className="tl-line" />
+              </div>
+              <div className="timeline-right">
+                <h3>{j.title}</h3>
+                <p className="tl-org">{j.org}</p>
+                <p className="tl-desc">{j.label}</p>
+              </div>
+            </li>
           </Reveal>
         ))}
-      </div>
+      </ol>
     </section>
   )
 }
