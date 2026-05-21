@@ -1,10 +1,10 @@
 import Reveal from './Reveal'
 
 const stats = [
+  { value: 'Cum',    sub: 'Laude Graduate',   icon: '🎓' },
   { value: "Dean's", sub: 'Lister 2023–2025', icon: '🏅' },
   { value: '4+',     sub: 'Projects Built',   icon: '🛠️' },
   { value: '5',      sub: 'Cisco Certs',      icon: '📜' },
-  { value: 'BSIT',   sub: 'Pasig Catholic College', icon: '🎓' },
 ]
 
 const journey = [
@@ -26,8 +26,8 @@ const journey = [
     year: '2022–2026',
     type: 'Education',
     title: 'BS Information Technology',
-    org: "Pasig Catholic College · Dean's Lister 2023–2025",
-    label: 'Specialized in web development, UI/UX design, and database management. Built a capstone project and multiple web-based case study applications.',
+    org: "Pasig Catholic College · Cum Laude · Dean's Lister 2023–2025",
+    label: 'Graduated Cum Laude. Specialized in web development, UI/UX design, and database management. Built a capstone project and multiple web-based case study applications.',
   },
   {
     year: '2026',
@@ -56,15 +56,15 @@ export default function About() {
         <Reveal className="about-bio-wrap">
           <div className="about-bio-card">
             <p className="about-bio-text">
-              I'm <strong>Ralphael Zion D. Chata</strong>, an Information Technology graduate from
-              Pasig Catholic College in Cainta, Rizal. I build clean, functional web experiences
-              and have a strong interest in UI/UX design and database-driven systems.
+              I'm <strong>Ralphael Zion D. Chata</strong>, a Cum Laude Information Technology
+              graduate from Pasig Catholic College in Cainta, Rizal. I build clean, functional
+              web experiences and have a strong interest in UI/UX design and database-driven systems.
             </p>
             <p className="about-bio-text">
               Outside of code, I value adaptability and continuous learning — two things that
-              helped me stay on the Dean's List while juggling multiple project builds and
-              Cisco certifications. I'm currently looking for opportunities where I can grow
-              and contribute in a real team environment.
+              helped me graduate Cum Laude, stay on the Dean's List, and earn multiple Cisco
+              certifications. I'm currently looking for opportunities where I can grow and
+              contribute in a real team environment.
             </p>
             <div className="about-tags">
               <span className="about-tag">📍 Cainta, Rizal</span>

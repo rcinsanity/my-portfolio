@@ -37,8 +37,8 @@ export default function Hero() {
 
           <Reveal delay={300}>
             <p className="hero-bio">
-              IT student at Pasig Catholic College with a passion for building
-              clean, fast web experiences. Dean's Lister 2023–2025. Lifelong learner.
+              IT graduate from Pasig Catholic College — Cum Laude, Dean's Lister 2023–2025.
+              Passionate about building clean, fast web experiences. Lifelong learner.
             </p>
           </Reveal>
 
@@ -69,8 +69,8 @@ export default function Hero() {
               />
               <div className="avatar-scan" aria-hidden="true" />
             </div>
-            <div className="avatar-badge" aria-label="Dean's Lister award">
-              <span>Dean's Lister</span>
+            <div className="avatar-badge" aria-label="Cum Laude graduate">
+              <span>Cum Laude 🎓</span>
             </div>
           </div>
         </Reveal>

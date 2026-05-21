@@ -99,8 +99,8 @@ export const timeline = [
     date: '2022 – 2026',
     type: 'Education',
     title: 'BS Information Technology',
-    org: "Pasig Catholic College · Dean's Lister 2023–2025",
-    desc: 'Specialized in web development, UI/UX design, and database management. Built a capstone student record management system and multiple web-based case study projects using PHP, Python, and modern web technologies.',
+    org: "Pasig Catholic College · Cum Laude · Dean's Lister 2023–2025",
+    desc: 'Graduated Cum Laude. Specialized in web development, UI/UX design, and database management. Built a capstone student record management system and multiple web-based case study projects using PHP, Python, and modern web technologies.',
   },
   {
     date: '2018 – 2022',
