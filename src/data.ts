@@ -98,22 +98,22 @@ export const timeline = [
   {
     date: '2022 – 2026',
     type: 'Education',
-    title: 'BS Information Technology',
+    title: 'Tertiary School — BS Information Technology',
     org: "Pasig Catholic College · Cum Laude · Dean's Lister 2023–2025",
     desc: 'Graduated Cum Laude. Specialized in web development, UI/UX design, and database management. Built a capstone student record management system and multiple web-based case study projects using PHP, Python, and modern web technologies.',
   },
   {
     date: '2018 – 2022',
     type: 'Education',
-    title: 'Senior High School — STEM',
+    title: 'Secondary School — STEM',
     org: 'Pasig Catholic College',
     desc: 'Completed Senior High School under the STEM strand, building a strong foundation in science, technology, engineering, and mathematics.',
   },
   {
     date: '2008 – 2017',
     type: 'Education',
-    title: 'Grade 1 – Grade 8',
+    title: 'Elementary School',
     org: 'Saint Gabriel International School',
-    desc: 'Completed primary and early secondary education from Grade 1 through Grade 8.',
+    desc: 'Completed elementary education from Grade 1 through Grade 8.',
   },
 ]
