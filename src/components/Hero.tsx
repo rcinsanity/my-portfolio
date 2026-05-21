@@ -4,7 +4,7 @@ import Reveal from './Reveal'
 import avatarImg from '../assets/avatar.jpg'
 
 export default function Hero() {
-  const typed = useTyping(['web developer.', 'UI/UX designer.', 'IT student.', 'problem solver.'])
+  const typed = useTyping(['web developer.', 'UI/UX designer.', 'IT graduate.', 'problem solver.'])
 
   return (
     <section className="hero" id="about">
@@ -38,7 +38,7 @@ export default function Hero() {
           <Reveal delay={300}>
             <p className="hero-bio">
               IT graduate from Pasig Catholic College — Cum Laude, Dean's Lister 2023–2025.
-              Passionate about building clean, fast web experiences. Lifelong learner.
+              Passionate about building clean, fast web experiences. Open to full-time roles.
             </p>
           </Reveal>
 

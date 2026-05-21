@@ -63,8 +63,8 @@ export default function About() {
             <p className="about-bio-text">
               Outside of code, I value adaptability and continuous learning — two things that
               helped me graduate Cum Laude, stay on the Dean's List, and earn multiple Cisco
-              certifications. I'm currently looking for opportunities where I can grow and
-              contribute in a real team environment.
+              certifications. I'm actively looking for full-time opportunities where I can grow
+              and contribute in a real team environment.
             </p>
             <div className="about-tags">
               <span className="about-tag">📍 Cainta, Rizal</span>
